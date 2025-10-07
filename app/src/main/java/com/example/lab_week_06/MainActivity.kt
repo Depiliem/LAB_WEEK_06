@@ -68,6 +68,55 @@ class MainActivity : AppCompatActivity() {
                     "Curious George",
                     "Award winning investigator",
                     "https://cdn2.thecatapi.com/images/bar.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.Bengal,
+                    "Tiger",
+                    "Energetic and playful",
+                    "https://cdn2.thecatapi.com/images/1f9.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.Birman,
+                    "Luna",
+                    "Graceful and calm",
+                    "https://cdn2.thecatapi.com/images/9j4.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.MaineCoon,
+                    "Shadow",
+                    "Big and fluffy protector",
+                    "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.Persian,
+                    "Misty",
+                    "Loves naps and grooming",
+                    "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.Sphynx,
+                    "Baldy",
+                    "Charming and unique",
+                    "https://cdn2.thecatapi.com/images/BDb8ZXb1v.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.Siamese,
+                    "Cleo",
+                    "Talkative and affectionate",
+                    "https://cdn2.thecatapi.com/images/ai6.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.ScottishFold,
+                    "Ollie",
+                    "Curious and friendly",
+                    "https://cdn2.thecatapi.com/images/MTc5MjU1Mw.jpg"
                 )
             )
         )
