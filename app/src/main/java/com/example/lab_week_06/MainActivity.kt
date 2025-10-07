@@ -3,6 +3,7 @@ package com.example.lab_week_06
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lab_week_06.model.CatBreed
@@ -33,13 +34,16 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = catAdapter
 
         // Setup the layout manager for the recycler view
-        // A layout manager is used to set the structure of the item views
-        // For this tutorial, we're using the vertical linear structure
         recyclerView.layoutManager = LinearLayoutManager(
             this,
             LinearLayoutManager.VERTICAL,
             false
         )
+
+        // ⬇️ Tambahkan kode ini untuk mengaktifkan swipe-to-delete
+        val itemTouchHelper = ItemTouchHelper(catAdapter.SwipeToDeleteCallback())
+        itemTouchHelper.attachToRecyclerView(recyclerView)
+        // ⬆️ Tambahkan di sini, sebelum catAdapter.setData()
 
         // Add data to the model list in the adapter
         catAdapter.setData(
@@ -72,11 +76,8 @@ class MainActivity : AppCompatActivity() {
     // This will create a pop up dialog when one of the items from the recycler view is clicked.
     private fun showSelectionDialog(cat: CatModel) {
         AlertDialog.Builder(this)
-            // Set the title for the dialog
             .setTitle("Cat Selected")
-            // Set the message for the dialog
             .setMessage("You have selected cat ${cat.name}")
-            // Set if the OK button should be enabled
             .setPositiveButton("OK") { _, _ -> }
             .show()
     }
